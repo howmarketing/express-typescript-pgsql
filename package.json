@@ -1,0 +1,29 @@
+{
+  "name": "typescript_default",
+  "version": "1.0.0",
+  "description": "Default ts server",
+  "author": "Ariza <gabsariza@icloud.com>",
+  "keywords": [
+    "express",
+    "typescript",
+    "fullstack",
+    "playground-app",
+    "database",
+    "postgreSql",
+    "locally-app"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "start": "./bin/app",
+    "test": "jest"
+  },
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "http-errors": "^2.0.0",
+    "pino": "^8.16.2",
+    "pino-http": "^8.5.1",
+    "pino-pretty": "^10.2.3"
+  }
+}
