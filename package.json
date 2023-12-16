@@ -12,11 +12,13 @@
     "postgreSql",
     "locally-app"
   ],
+  "module": "commonjs",
   "license": "MIT",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
-    "start": "./bin/app",
-    "test": "jest"
+    "start": "concurrently \"npm:watch-server\" \"npm:browser-sync\"",
+    "watch-server": "nodemon ./bin/app",
+    "browser-sync": "browser-sync start --proxy 'localhost:8000' --files 'views/**/*.html'"
   },
   "dependencies": {
     "ejs": "^3.1.9",
@@ -25,5 +27,12 @@
     "pino": "^8.16.2",
     "pino-http": "^8.5.1",
     "pino-pretty": "^10.2.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "browser-sync": "^2.29.3",
+    "concurrently": "^8.2.2",
+    "jest": "^29.7.0",
+    "typescript": "5.3.3"
   }
 }
